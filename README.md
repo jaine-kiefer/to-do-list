@@ -19,10 +19,15 @@ Projeto de estudo.
 As seguintes tecnologias foram usadas na construção do projeto:
 
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Expo](https://expo.io/)
+- [React](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
 
 # Desenvolvimento
 
 <h1 align="center">Referências</h1>
 <p>https://developer.mozilla.org/pt-BR/docs/Web/JavaScript</p>
+<p>https://expo.io/</p>
+<p>https://pt-br.reactjs.org/</p>
+<p>https://reactnative.dev/</p>
 
-Aplicativo mobile em desenvolvimento, utilizando Expo, React Native.
