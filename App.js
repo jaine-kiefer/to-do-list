@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { ItemDaLista } from './src/component/ItemDaLista';
 
 
 export default function App() {
@@ -11,7 +12,7 @@ export default function App() {
         animated={true}
         showHideTransition={true}
         hidden={true} />
-        
+
       <View> 
         <Text style={style.titulo}>Lista de Tarefas da {texto}</Text>
       </View>
@@ -19,6 +20,9 @@ export default function App() {
         <TextInput style={style.input} value={texto} onChangeText={setaTexto}/>
         <Button title='Adicionar tarefa'/>
       </View>
+
+      <ItemDaLista titulo={"Tarefa1"}/>
+
     </View>
   );
 }
