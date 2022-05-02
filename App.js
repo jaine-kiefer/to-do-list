@@ -7,6 +7,11 @@ export default function App() {
   let [texto, setaTexto] = useState("Jaine");
   return (
     <View>
+      <StatusBar
+        animated={true}
+        showHideTransition={true}
+        hidden={true} />
+        
       <View> 
         <Text style={style.titulo}>Lista de Tarefas da {texto}</Text>
       </View>
