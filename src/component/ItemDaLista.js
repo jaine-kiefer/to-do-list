@@ -1,13 +1,13 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 
-export function ItemDaLista({ titulo, estado }) {
+export function ItemDaLista({ titulo, estado, onPress }) {
     return (
-        <View>
+        <TouchableOpacity onPress={onPress}>
             <Text
                 style={{ textDecorationLine: estado ? 'line-through' : 'none', textDecorationStyle: 'solid' }}
             >
                 {titulo}
             </Text>
-        </View>
+        </TouchableOpacity>
     )
 }
