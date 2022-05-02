@@ -2,8 +2,7 @@ import { View } from "react-native";
 import { useState } from "react";
 import { ItemDaLista } from "./ItemDaLista";
 
-export function Lista () {
-    const [ itens, setaItens] = useState([{titulo: "tarefa1", estado: false}, {titulo: "tarefa2", estado: false}]);
+export function Lista ({itens, setaItens}) {
 
     const mudaEstadoItem = (item) => {
         item.estado = !item.estado;

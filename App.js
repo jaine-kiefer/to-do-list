@@ -6,6 +6,7 @@ import { Lista } from './src/component/Lista';
 
 export default function App() {
   let [texto, setaTexto] = useState("Jaine");
+  const [ itens, setaItens] = useState([{titulo: "tarefa1", estado: false}, {titulo: "tarefa2", estado: false}]);
   return (
     <View>
       <StatusBar
@@ -21,7 +22,7 @@ export default function App() {
         <Button title='Adicionar tarefa'/>
       </View>
 
-      <Lista/>
+      <Lista itens={itens} setaItens={setaItens}/>
 
     </View>
   );
