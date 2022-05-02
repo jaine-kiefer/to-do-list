@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
-import { ItemDaLista } from './src/component/ItemDaLista';
+import { Lista } from './src/component/Lista';
 
 
 export default function App() {
@@ -21,7 +21,7 @@ export default function App() {
         <Button title='Adicionar tarefa'/>
       </View>
 
-      <ItemDaLista titulo={"Tarefa1"} estado={false}/>
+      <Lista/>
 
     </View>
   );
