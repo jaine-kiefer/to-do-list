@@ -21,7 +21,7 @@ export default function App() {
         <Button title='Adicionar tarefa'/>
       </View>
 
-      <ItemDaLista titulo={"Tarefa1"}/>
+      <ItemDaLista titulo={"Tarefa1"} estado={false}/>
 
     </View>
   );
