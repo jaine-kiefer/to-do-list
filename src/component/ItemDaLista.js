@@ -1,13 +1,26 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 export function ItemDaLista({ titulo, estado, onPress }) {
     return (
-        <TouchableOpacity onPress={onPress}>
+        <TouchableOpacity style={style.item} onPress={onPress}>
             <Text
-                style={{ textDecorationLine: estado ? 'line-through' : 'none', textDecorationStyle: 'solid' }}
+                style={[ style.text, { textDecorationLine: estado ? 'line-through' : 'none', textDecorationStyle: 'solid' }]}
             >
                 {titulo}
             </Text>
         </TouchableOpacity>
     )
 }
+
+const style = StyleSheet.create({
+    item: {
+        backgroundColor: "white",
+        padding: 10,
+        marginBottom: 5,
+    },
+
+    text: {
+        fontSize: 16,
+
+    }
+})

@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, SafeAreaView } from 'react-native';
 import { Lista } from './src/component/Lista';
 
 
 export default function App() {
   const [texto, setaTexto] = useState("");
-  const [ itens, setaItens] = useState([{titulo: "tarefa1", estado: false}, {titulo: "tarefa2", estado: false}]);
+  const [ itens, setaItens] = useState([{titulo: "Tarefa falta fazer", estado: false}, {titulo: "Tarefa concluída", estado: false}]);
   const adicionaItem = (e) => {
     if(texto != "") {
       setaItens([
@@ -17,7 +17,7 @@ export default function App() {
     }
   }
   return (
-    <View>
+    <SafeAreaView style={style.containerRaiz}>
       <StatusBar
         animated={true}
         showHideTransition={true}
@@ -33,20 +33,30 @@ export default function App() {
 
       <Lista itens={itens} setaItens={setaItens}/>
 
-    </View>
+    </SafeAreaView>
   );
 }
 
 const style = StyleSheet.create({
+  containerRaiz: {
+    flex: 1,
+    paddingHorizontal: 20,
+    backgroundColor: "#e3f8ff",
+  },
+
   titulo: {
-    fontSize: 24,
+    fontSize: 30,
     textAlign: "center",
+    paddingTop: 20,
+    paddingBottom: 15,
+    color: "#555",
   },
 
   input: {
     borderWidth: 1,
-    borderColor: "black",
+    borderColor: "#bbb",
     marginBottom: 10,
-    padding: 8,
+    padding: 6,
+    backgroundColor: "white",
   }
 })
